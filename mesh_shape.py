@@ -218,58 +218,6 @@ class MeshShape():
         
         self.Verts.append((Previous.X, 0, Previous.Y))
         self.VertEdges.append([VertEdgeIndex, 0])
-        
-        return
-        
-        #Add top right corner
-        self.Verts.append((FrontShape.Corners[0][0], 0, FrontShape.Corners[0][1]))
-        VertEdgeIndex = 0
-        
-        #Add right edge
-        
-        #Add bottom right corner
-        self.Verts.append((FrontShape.Corners[1][0], 0, FrontShape.Corners[1][1]))
-        self.VertEdges.append([self.VertEdgeIndex, self.VertEdgeIndex + 1])
-        self.VertEdgeIndex += 1
-        
-        #Add bottom edge
-        self.CurrentVertSide = Side.Bottom
-        for i in range(len(FrontShape.Edges[self.CurrentVertSide])):
-            X, Y = FrontShape.Edges[self.CurrentVertSide][i]
-            self.Verts.append((X, 0, Y))
-            self.VertEdges.append([self.VertEdgeIndex, self.VertEdgeIndex + 1])
-            self.VertEdgeIndex += 1
-        
-        #Add bottom left corner
-        self.Verts.append((FrontShape.Corners[2][0], 0, FrontShape.Corners[2][1]))
-        self.VertEdges.append([self.VertEdgeIndex, self.VertEdgeIndex + 1])
-        self.VertEdgeIndex += 1
-        
-        #Add left edge
-        #self.__AddEdge(FrontShape, LeftShape, Side.Left, Side.Right)
-        self.CurrentVertSide = Side.Left
-        for i in range(len(FrontShape.Edges[self.CurrentVertSide])):
-            X, Y = FrontShape.Edges[self.CurrentVertSide][i]
-            self.Verts.append((X, 0, Y))
-            self.VertEdges.append([self.VertEdgeIndex, self.VertEdgeIndex + 1])
-            self.VertEdgeIndex += 1
-        
-        #Add top left corner
-        self.Verts.append((FrontShape.Corners[3][0], 0, FrontShape.Corners[3][1]))
-        self.VertEdges.append([self.VertEdgeIndex, self.VertEdgeIndex + 1])
-        self.VertEdgeIndex += 1
-        
-        #Add top edge
-        #self.__AddEdge(FrontShape, TopShape, Side.Top, Side.Bottom)
-        self.CurrentVertSide = Side.Top
-        for i in range(len(FrontShape.Edges[self.CurrentVertSide])):
-            X, Y = FrontShape.Edges[self.CurrentVertSide][i]
-            self.Verts.append((X, 0, Y))
-            self.VertEdges.append([self.VertEdgeIndex, self.VertEdgeIndex + 1])
-            self.VertEdgeIndex += 1
-        
-        #Attach final vert to first vert
-        self.VertEdges.append([self.VertEdgeIndex, 0])
     
     #Adds edges to the end of existing verts
     def __AddEdge(self, SideFirst, SideSecond, FirstVertSide, SecondVertSide):
