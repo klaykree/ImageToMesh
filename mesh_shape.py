@@ -51,13 +51,6 @@ class MeshShape():
             self.__CreateOutlineMesh()
             self.Mesh.from_pydata(self.Verts, self.VertEdges, [])
         
-        #self.Mesh.from_pydata(self.Verts, [], [])
-        
-        #bpy.ops.object.mode_set(mode='EDIT', toggle=False)
-        #bpy.ops.mesh.select_all(action='SELECT')
-        #bpy.ops.mesh.fill()
-        #bpy.ops.object.mode_set(mode='OBJECT', toggle=False)
-        
         self.Mesh.update()
     
     def __IgnoreColor(self, RGBA):
