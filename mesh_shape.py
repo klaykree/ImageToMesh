@@ -156,7 +156,6 @@ class MeshShape():
     def __SuitableForClockwise(self, X, Y, IgnorePixel):
         i = self.__ContainsPosition(X, Y)
         
-        #if (X == IgnorePixel.X and Y == IgnorePixel.Y) or  i == -1:
         if i == -1:
             return False
         
@@ -176,7 +175,6 @@ class MeshShape():
     #Also returns the direction from the next pixel to X Y
     def __NextClockwisePixel(self, X, Y, DirectionX, DirectionY, IgnorePixel):
         for i in range(8):
-            #if self.__SuitableForClockwise(X + DirectionX, Y + DirectionY, IgnorePixel):
             if self.__ContainsPosition(X + DirectionX, Y + DirectionY) != -1:
                 return X + DirectionX, Y + DirectionY, -DirectionX, -DirectionY
             DirectionX, DirectionY = self.__NextClockwiseDir(DirectionX, DirectionY)
@@ -207,7 +205,6 @@ class MeshShape():
         TotalPixels = len(self.Pixels) // 4
         while (X != StartX or Y != StartY) and self.Count < TotalPixels:
             AddedNewVert = self.__AddVertIfNotAdded(Previous.X, Previous.Y, 0, AddedVerts) == (len(self.Verts) - 1)
-            #self.Verts.append((Previous.X, 0, Previous.Y))
             if AddedNewVert:
                 self.VertEdges.append([VertEdgeIndex, VertEdgeIndex + 1])
                 VertEdgeIndex += 1
