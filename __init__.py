@@ -63,9 +63,9 @@ class ImageToMesh(bpy.types.Operator):
  def draw(self, context):
     self.layout.prop(self, 'Image')
     self.layout.operator("depth.button")
-    self.layout.prop(self, 'Depth', text='Mesh depth')
     self.layout.operator("outline.button")
     self.layout.prop(self, "DepthGradient", text='')
+    self.layout.prop(self, 'Depth', text='Mesh depth')
  
  def execute(self, context):
     global DepthButtonPressed
