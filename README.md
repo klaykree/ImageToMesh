@@ -8,3 +8,4 @@ Above image of a hand was generated into a 3D mesh seen below
 ![3D hand](/readme/Hand3D.png?raw=true "3D hand")  
 
 Add > Mesh > Image (to mesh):
+![Create mesh settings](/readme/ImageToMeshSettings.png?raw=true "Create mesh settings")
