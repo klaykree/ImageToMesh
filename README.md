@@ -9,3 +9,8 @@ Above image of a hand was generated into a 3D mesh seen below
 
 Add > Mesh > Image (to mesh):  
 ![Create mesh settings](/readme/ImageToMeshSettings.png?raw=true "Create mesh settings")
+-Image location
+-Generate depth mesh button
+-Generate outline mesh button
+-Image depth type drop down list
+-Image depth length value
