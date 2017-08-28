@@ -8,7 +8,7 @@ Above image of a hand was generated into a 3D mesh seen below
 ![3D hand](/readme/Hand3D.png?raw=true "3D hand")  
 
 Add > Mesh > Image (to mesh):  
-<img style="float: right;" src="/readme/ImageToMeshSettings.png?raw=true">
+<img align="left" src="/readme/ImageToMeshSettings.png?raw=true">  
 Image location  
 Generate depth mesh button  
 Generate outline mesh button  
