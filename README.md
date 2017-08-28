@@ -13,4 +13,4 @@ Image location
 Generate depth mesh button  
 Generate outline mesh button  
 Image depth type drop down list  
-Image depth length value
+Image depth value
